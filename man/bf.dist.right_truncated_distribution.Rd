@@ -91,7 +91,7 @@ If the original probability density function is \code{f(x)} and the cumulative
 distribution function is \code{F(x)}, and the distribution is right-truncated at a
 value \code{b} (meaning \verb{x ≤ b}), the new PDF, \code{f_T(x)}, is:
 
-\deqn{f_{\rm trunc}(x \mid X \le b) = \begin{cases} \displaystyle \frac{,f(x),}{,F(b),}, & x \le b, \ 0, & x > b. \end{cases}}
+\deqn{f_{\rm trunc}(x \mid X \le b) = \begin{cases} \displaystyle \frac{,f(x),}{,F(b),}, & x \le b, \\ 0, & x > b. \end{cases}}
 
 \strong{For a discrete random variable X:}
 

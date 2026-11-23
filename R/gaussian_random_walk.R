@@ -6,10 +6,10 @@
 #' step is the previous value plus a Gaussian-distributed increment. The
 #' distribution is over the entire path.
 #'
-#' @param scale The standard deviation ($\\sigma`) of the Gaussian increments.
-#'   Must be positive. Defaults to 1.0. - *num_steps (int, optional): The number
-#'   of steps in the random walk, which determines the event shape of the
-#'   distribution. Must be positive. Defaults to 1. - *validate_args (bool,
+#' @param scale The standard deviation (\eqn{\sigma}) of the Gaussian
+#'   increments. Must be positive. Defaults to 1.0. - *num_steps (int, optional):
+#'   The number of steps in the random walk, which determines the event shape of
+#'   the distribution. Must be positive. Defaults to 1. - *validate_args (bool,
 #'   optional): Whether to enable validation of distribution parameters. Defaults
 #'   to `py_none()`.
 #' @param num_steps See the Python documentation of `num_steps`.

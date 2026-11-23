@@ -29,7 +29,7 @@
 #' For values (y < a) or (y > b), (f_Y(y) = 0).
 #'
 #' @param loc The location parameter of the normal distribution.
-#' @param scale See the Python documentation of `scale`.
+#' @param scale The scale parameter of the normal distribution.
 #' @param low See the Python documentation of `low`.
 #' @param high See the Python documentation of `high`.
 #' @param validate_args Logical. Whether to validate the parameter values.

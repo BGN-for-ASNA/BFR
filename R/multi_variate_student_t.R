@@ -17,7 +17,7 @@
 #' * \eqn{\mu} is the mean vector.
 #' * \eqn{\Sigma} is the scale (covariance) matrix.
 #' * \eqn{\nu} is the degrees of freedom.
-#' * \eqn{d} is the dimensionality of \eqn{\mathbf{x}}.
+#' * \eqn{d}is the dimensionality of\eqn{\mathbf{x}}.
 #'
 #' @param df Degrees of freedom, must be positive.
 #' @param loc Location vector, representing the mean of the distribution.

@@ -14,7 +14,7 @@
 #' A random variable \eqn{X \sim \text{Pareto}(\alpha, x_m)} takes values \eqn{x
 #' \ge x_m}.
 #'
-#' \deqn{f(x \mid \alpha, x_m) = \begin{cases} \dfrac{\alpha x_m^\alpha}{x^{\alpha + 1}}, & x \ge x_m, \ 0, & x < x_m. \end{cases}}
+#' \deqn{f(x \mid \alpha, x_m) = \begin{cases} \dfrac{\alpha x_m^\alpha}{x^{\alpha + 1}}, & x \ge x_m, \\ 0, & x < x_m. \end{cases}}
 #'
 #' @param scale Scale parameter of the Pareto distribution. Must be positive.
 #' @param alpha Shape parameter of the Pareto distribution. Must be positive.

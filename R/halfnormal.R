@@ -7,7 +7,7 @@
 #' normal random variable. It is defined by a location parameter (implicitly 0)
 #' and a scale parameter.
 #'
-#' \deqn{f(x; \sigma) = \frac{2}{\pi,\sigma} ; \frac{1}{1 + \bigl(x/\sigma\bigr)^2}, \qquad x \ge 0.}
+#' \deqn{f(x; \sigma) = \frac{\sqrt{2}}{\sigma\sqrt{\pi}} \exp\left(-\frac{x^2}{2\sigma^2}\right), \qquad x \ge 0.}
 #'
 #' @param scale The scale parameter of the distribution. Must be positive.
 #' @param validate_args Logical. Whether to validate the parameter values.

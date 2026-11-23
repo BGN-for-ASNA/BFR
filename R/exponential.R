@@ -13,7 +13,7 @@
 #'
 #' Zhere ( \\lambda > 0 ) is the rate parameter (the mean is ( 1/\\lambda )).
 #'
-#' @param rate The rate parameter, $\\lambda`. Must be positive.
+#' @param rate The rate parameter, \eqn{\lambda}. Must be positive.
 #' @param validate_args Logical. Whether to validate the parameter values.
 #'   Defaults to `py_none()` (the NumPyro default).
 #' @param name Character. Name of the random variable in the model. When not

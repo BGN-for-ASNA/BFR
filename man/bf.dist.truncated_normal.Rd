@@ -24,7 +24,7 @@ bf.dist.truncated_normal(
 \arguments{
 \item{loc}{The location parameter of the normal distribution.}
 
-\item{scale}{See the Python documentation of \code{scale}.}
+\item{scale}{The scale parameter of the normal distribution.}
 
 \item{low}{See the Python documentation of \code{low}.}
 

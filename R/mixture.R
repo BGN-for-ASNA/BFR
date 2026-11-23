@@ -20,10 +20,13 @@
 #'
 #' Then the marginalised mixture distribution for an observed \eqn{X} is:
 #'
-#' \deqn{p(X = x) = \sum_{j=1}^K \pi_j ; f_j(x \mid \theta_j). $ This is exactly the mixture density/PMF you get when you marginalise the latent component‑assignment variable $Z \in {1,\dots,K}$ out of the joint distribution:}
+#' \deqn{p(X = x) = \sum_{j=1}^K \pi_j ; f_j(x \mid \theta_j).}
 #'
-#' p(x) = \\sum_\{z=1\}^K p(z = j); p(x \\mid z = j) = \\sum_\{j=1\}^K \\pi_j ;
-#' f_j(x \\mid \\theta_j). $$
+#' This is exactly the mixture density/PMF you get when you marginalise the
+#' latent component‑assignment variable \eqn{Z \in {1,\dots,K}} out of the joint
+#' distribution:
+#'
+#' \deqn{p(x) = \sum_{z=1}^K p(z = j); p(x \mid z = j) = \sum_{j=1}^K \pi_j ; f_j(x \mid \theta_j).}
 #'
 #' @param mixing_distribution The distribution used to determine the mixing
 #'   weights.

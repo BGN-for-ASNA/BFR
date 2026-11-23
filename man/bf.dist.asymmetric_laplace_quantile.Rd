@@ -23,7 +23,7 @@ bf.dist.asymmetric_laplace_quantile(
 \arguments{
 \item{loc}{The location parameter of the distribution.}
 
-\item{scale}{See the Python documentation of \code{scale}.}
+\item{scale}{The scale parameter of the distribution.}
 
 \item{quantile}{The quantile parameter, representing the proportion of
 probability density to the left of the median. Must be between 0 and 1.}

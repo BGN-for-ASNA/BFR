@@ -9,10 +9,10 @@
 #' \deqn{dX_t = f(X_t, t) dt + g(X_t, t) dW_t}
 #'
 #' where:
-#' - \eqn{X_t` is the state of the system at time}t`.
-#' - $f(X_t, t)` is the drift coefficient.
-#' - $g(X_t, t)` is the diffusion coefficient.
-#' - $dW_t` is a Wiener process (Brownian motion).
+#' - \eqn{X_t} is the state of the system at time \eqn{t}.
+#' - \eqn{f(X_t, t)} is the drift coefficient.
+#' - \eqn{g(X_t, t)} is the diffusion coefficient.
+#' - \eqn{dW_t} is a Wiener process (Brownian motion).
 #'
 #' @param t Discretized time steps.
 #' @param sde_fn A function that takes the current state and time as input and

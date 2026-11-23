@@ -10,7 +10,7 @@
 #' that falls to the left-hand side.
 #'
 #' @param loc The location parameter of the distribution.
-#' @param scale See the Python documentation of `scale`.
+#' @param scale The scale parameter of the distribution.
 #' @param quantile The quantile parameter, representing the proportion of
 #'   probability density to the left of the median. Must be between 0 and 1.
 #' @param validate_args Logical. Whether to validate the parameter values.

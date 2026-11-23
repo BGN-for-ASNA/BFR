@@ -20,7 +20,7 @@
 #' distribution function is `F(x)`, and the distribution is right-truncated at a
 #' value `b` (meaning `x ≤ b`), the new PDF, `f_T(x)`, is:
 #'
-#' \deqn{f_{\rm trunc}(x \mid X \le b) = \begin{cases} \displaystyle \frac{,f(x),}{,F(b),}, & x \le b, \ 0, & x > b. \end{cases}}
+#' \deqn{f_{\rm trunc}(x \mid X \le b) = \begin{cases} \displaystyle \frac{,f(x),}{,F(b),}, & x \le b, \\ 0, & x > b. \end{cases}}
 #'
 #' **For a discrete random variable X:**
 #'

@@ -64,8 +64,8 @@
 #' \itemize{
 #'   \item When `sample = FALSE`: A BF CAR distribution object (for  model
 #'     building).
-#'   \item When `sample = TRUE`: A JAX array of samples drawn from the
-#'     BernoulliLogits distribution (for direct sampling).
+#'   \item When `sample = TRUE`: A JAX array of samples drawn from the CAR
+#'     distribution (for direct sampling).
 #'   \item When `create_obj = TRUE`: The raw BF CAR object (for advanced use
 #'     cases).
 #' }

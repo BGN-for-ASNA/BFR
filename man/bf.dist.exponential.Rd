@@ -19,7 +19,7 @@ bf.dist.exponential(
 )
 }
 \arguments{
-\item{rate}{The rate parameter, $\\lambda`. Must be positive.}
+\item{rate}{The rate parameter, \eqn{\lambda}. Must be positive.}
 
 \item{validate_args}{Logical. Whether to validate the parameter values.
 Defaults to \code{py_none()} (the NumPyro default).}

@@ -94,7 +94,7 @@ where:
 \item \eqn{\mu} is the mean vector.
 \item \eqn{\Sigma} is the scale (covariance) matrix.
 \item \eqn{\nu} is the degrees of freedom.
-\item \eqn{d} is the dimensionality of \eqn{\mathbf{x}}.
+\item \eqn{d}is the dimensionality of\eqn{\mathbf{x}}.
 }
 }
 \examples{
