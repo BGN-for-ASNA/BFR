@@ -288,14 +288,12 @@ if (requireNamespace("reticulate", quietly = TRUE) &&
   test_that("ppc_error_scatter matches bayesplot ppc_error_scatter_avg", {
     s <- shared_lin()
     fig <- s$m$diag$ppc_error_scatter(y = s$y, yrep = s$yrep)
-    # reference: the data frame of bayesplot's own plot, as make_reference.R's
-    # error_scatter_x / error_scatter_y quantities: p$data$value carries the
-    # mean errors y - E[yrep] and p$data$y_obs the observed y, so BF's
-    # x = E[yrep] = y_obs - value and y = y_obs (the fields the Python
-    # fixture test test_ppc_error_scatter compares)
+    # reference: the data frame of bayesplot's own plot: p$data$value carries
+    # the mean errors y - E[yrep] and p$data$y_obs the observed y; BF plots,
+    # like bayesplot, x = mean error and y = observed y
     p <- bayesplot::ppc_error_scatter_avg(s$y, s$yrep)
     pts <- trace_by_name(traces(fig), "observations")
-    expect_equal(trace_field(pts, "x"), p$data$y_obs - p$data$value,
+    expect_equal(trace_field(pts, "x"), p$data$value,
                  tolerance = 1e-7)
     expect_equal(trace_field(pts, "y"), p$data$y_obs, tolerance = 1e-7)
   })
