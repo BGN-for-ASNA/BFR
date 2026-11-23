@@ -7,7 +7,7 @@
 #' freedom (df), the number of independent standard normal variables squared and
 #' summed, which determines the shape of the distribution.
 #'
-#' \deqn{f(x; k) = \begin{cases} \frac{x^{\frac{k}{2} - 1} e^{-x/2}}{2^{\frac{k}{2}} \Gamma\left(\frac{k}{2}\right)}, & x > 0 \ 0, & \text{otherwise} \end{cases}}
+#' \deqn{f(x; k) = \begin{cases} \frac{x^{\frac{k}{2} - 1} e^{-x/2}}{2^{\frac{k}{2}} \Gamma\left(\frac{k}{2}\right)}, & x > 0 \\ 0, & \text{otherwise} \end{cases}}
 #'
 #' where:
 #' * ( x ) is the random variable,
@@ -46,8 +46,8 @@
 #' \itemize{
 #'   \item When `sample = FALSE`: A BF Chi2 distribution object (for  model
 #'     building).
-#'   \item When `sample = TRUE`: A JAX array of samples drawn from the
-#'     BernoulliLogits distribution (for direct sampling).
+#'   \item When `sample = TRUE`: A JAX array of samples drawn from the Chi2
+#'     distribution (for direct sampling).
 #'   \item When `create_obj = TRUE`: The raw BF Chi2 object (for advanced use
 #'     cases).
 #' }

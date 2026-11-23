@@ -104,9 +104,11 @@ It reduces to the binomial when (k=2).
 PMF (Probability Mass Function):
 
 For \eqn{\mathbf x = (x_1,\dots,x_k)} with each \eqn{x_i \ge 0} integer and
-\eqn{\sum_{i=1}^k x_i = n}, $$ \\Pr(X_1 = x_1, \\dots, X_k = x_k) =
-\\frac\{n!\}\{x_1!,x_2!\\cdots x_k!\} ; p_1^\{,x_1\}; p_2^\{,x_2\} \\cdots
-p_k^\{,x_k\}. $ If \eqn{\sum_i x_i \neq n}, the probability is 0.
+\eqn{\sum_{i=1}^k x_i = n},
+
+\deqn{\Pr(X_1 = x_1, \dots, X_k = x_k) = \frac{n!}{x_1!,x_2!\cdots x_k!} ; p_1^{,x_1}; p_2^{,x_2} \cdots p_k^{,x_k}.}
+
+If \eqn{\sum_i x_i \neq n}, the probability is 0.
 }
 \examples{
 \donttest{

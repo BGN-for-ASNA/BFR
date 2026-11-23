@@ -79,10 +79,10 @@ random perturbation to account for the diffusion term.
 
 where:
 \itemize{
-\item \eqn{X_t` is the state of the system at time}t`.
-\item $f(X_t, t)` is the drift coefficient.
-\item $g(X_t, t)` is the diffusion coefficient.
-\item $dW_t` is a Wiener process (Brownian motion).
+\item \eqn{X_t} is the state of the system at time \eqn{t}.
+\item \eqn{f(X_t, t)} is the drift coefficient.
+\item \eqn{g(X_t, t)} is the diffusion coefficient.
+\item \eqn{dW_t} is a Wiener process (Brownian motion).
 }
 }
 \examples{

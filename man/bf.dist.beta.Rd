@@ -65,8 +65,8 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 \itemize{
 \item When \code{sample = FALSE}: A BF Beta distribution object (for  model
 building).
-\item When \code{sample = TRUE}: A JAX array of samples drawn from the
-BernoulliLogits distribution (for direct sampling).
+\item When \code{sample = TRUE}: A JAX array of samples drawn from the Beta
+distribution (for direct sampling).
 \item When \code{create_obj = TRUE}: The raw BF Beta object (for advanced use
 cases).
 }
@@ -84,7 +84,7 @@ where \eqn{B(\alpha, \beta)} is the Beta function:
 
 \deqn{B(\alpha, \beta) = \int_0^1 x^{\alpha - 1} (1 - x)^{\beta - 1} , dx = \frac{\Gamma(\alpha),\Gamma (\beta)}{\Gamma(\alpha + \beta)}.}
 
-where :num\eqn{\alpha` and}\\beta$ are the concentration parameters, and
+where :num\eqn{\alpha} and \eqn{\beta} are the concentration parameters, and
 \eqn{B(x, y)} is the Beta function.
 }
 \examples{

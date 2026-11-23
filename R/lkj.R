@@ -2,8 +2,8 @@
 #'
 #' @description
 #' The LKJ distribution is controlled by the concentration parameter \eqn{\eta}
-#' to make the probability of the correlation matrix \eqn{M` proportional
-#' to}\\det(M)^\{\\eta - 1\}\eqn{. When}\\eta = 1$, the distribution is uniform
+#' to make the probability of the correlation matrix \eqn{M} proportional to
+#' \eqn{\det(M)^{\eta - 1}}. When \eqn{\eta = 1}, the distribution is uniform
 #' over correlation matrices.  When \eqn{\eta > 1}, the distribution favors
 #' samples with large determinants. When \eqn{\eta < 1}, the distribution favors
 #' samples with small determinants.

@@ -96,7 +96,7 @@ We write
 with \eqn{0 \le p \le 1}.
 \subsection{Probability Mass Function (PMF)}{
 
-\deqn{P(X = x) = \begin{cases} p, & \text{if } x = 1, \ 1 - p, & \text{if } x = 0, \ 0, & \text{otherwise.} \end{cases}}
+\deqn{P(X = x) = \begin{cases} p, & \text{if } x = 1, \\ 1 - p, & \text{if } x = 0, \\ 0, & \text{otherwise.} \end{cases}}
 
 Alternatively, using an “indicator” exponent form:
 

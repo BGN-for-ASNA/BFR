@@ -20,7 +20,12 @@ bf.dist.gaussian_random_walk(
 )
 }
 \arguments{
-\item{scale}{The standard deviation ($\\sigma\verb{) of the Gaussian increments. Must be positive. Defaults to 1.0. - *num_steps (int, optional): The number of steps in the random walk, which determines the event shape of the distribution. Must be positive. Defaults to 1. - *validate_args (bool, optional): Whether to enable validation of distribution parameters. Defaults to }py_none()`.}
+\item{scale}{The standard deviation (\eqn{\sigma}) of the Gaussian
+increments. Must be positive. Defaults to 1.0. - *num_steps (int, optional):
+The number of steps in the random walk, which determines the event shape of
+the distribution. Must be positive. Defaults to 1. - *validate_args (bool,
+optional): Whether to enable validation of distribution parameters. Defaults
+to \code{py_none()}.}
 
 \item{num_steps}{See the Python documentation of \code{num_steps}.}
 

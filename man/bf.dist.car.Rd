@@ -74,8 +74,8 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 \itemize{
 \item When \code{sample = FALSE}: A BF CAR distribution object (for  model
 building).
-\item When \code{sample = TRUE}: A JAX array of samples drawn from the
-BernoulliLogits distribution (for direct sampling).
+\item When \code{sample = TRUE}: A JAX array of samples drawn from the CAR
+distribution (for direct sampling).
 \item When \code{create_obj = TRUE}: The raw BF CAR object (for advanced use
 cases).
 }

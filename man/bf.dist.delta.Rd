@@ -70,8 +70,8 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 \itemize{
 \item When \code{sample = FALSE}: A BF Circulant Delta Distribution distribution
 object (for  model building).
-\item When \code{sample = TRUE}: A JAX array of samples drawn from the
-BernoulliLogits distribution (for direct sampling).
+\item When \code{sample = TRUE}: A JAX array of samples drawn from the Delta
+distribution (for direct sampling).
 \item When \code{create_obj = TRUE}: The raw BF Circulant Delta Distribution
 object (for advanced use cases).
 }
@@ -82,7 +82,7 @@ probability 1 to a single point and 0 elsewhere. It's useful for representing
 deterministic variables or as a building block for more complex
 distributions.
 
-\deqn{F(x) = \begin{cases} 0, & x < a, \ 1, & x \ge a. \end{cases}}
+\deqn{F(x) = \begin{cases} 0, & x < a, \\ 1, & x \ge a. \end{cases}}
 }
 \examples{
 \donttest{

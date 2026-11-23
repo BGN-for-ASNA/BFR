@@ -60,8 +60,8 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 \itemize{
 \item When \code{sample = FALSE}: A BF Chi2 distribution object (for  model
 building).
-\item When \code{sample = TRUE}: A JAX array of samples drawn from the
-BernoulliLogits distribution (for direct sampling).
+\item When \code{sample = TRUE}: A JAX array of samples drawn from the Chi2
+distribution (for direct sampling).
 \item When \code{create_obj = TRUE}: The raw BF Chi2 object (for advanced use
 cases).
 }
@@ -73,7 +73,7 @@ chi-squared tests. It is defined by a single positive parameter, degrees of
 freedom (df), the number of independent standard normal variables squared and
 summed, which determines the shape of the distribution.
 
-\deqn{f(x; k) = \begin{cases} \frac{x^{\frac{k}{2} - 1} e^{-x/2}}{2^{\frac{k}{2}} \Gamma\left(\frac{k}{2}\right)}, & x > 0 \ 0, & \text{otherwise} \end{cases}}
+\deqn{f(x; k) = \begin{cases} \frac{x^{\frac{k}{2} - 1} e^{-x/2}}{2^{\frac{k}{2}} \Gamma\left(\frac{k}{2}\right)}, & x > 0 \\ 0, & \text{otherwise} \end{cases}}
 
 where:
 \itemize{

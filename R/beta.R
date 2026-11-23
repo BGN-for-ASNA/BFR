@@ -13,7 +13,7 @@
 #'
 #' \deqn{B(\alpha, \beta) = \int_0^1 x^{\alpha - 1} (1 - x)^{\beta - 1} , dx = \frac{\Gamma(\alpha),\Gamma (\beta)}{\Gamma(\alpha + \beta)}.}
 #'
-#' where :num\eqn{\alpha` and}\\beta$ are the concentration parameters, and
+#' where :num\eqn{\alpha} and \eqn{\beta} are the concentration parameters, and
 #' \eqn{B(x, y)} is the Beta function.
 #'
 #' @param concentration1 The first concentration parameter (shape parameter).
@@ -51,8 +51,8 @@
 #' \itemize{
 #'   \item When `sample = FALSE`: A BF Beta distribution object (for  model
 #'     building).
-#'   \item When `sample = TRUE`: A JAX array of samples drawn from the
-#'     BernoulliLogits distribution (for direct sampling).
+#'   \item When `sample = TRUE`: A JAX array of samples drawn from the Beta
+#'     distribution (for direct sampling).
 #'   \item When `create_obj = TRUE`: The raw BF Beta object (for advanced use
 #'     cases).
 #' }

@@ -6,7 +6,7 @@
 #' deterministic variables or as a building block for more complex
 #' distributions.
 #'
-#' \deqn{F(x) = \begin{cases} 0, & x < a, \ 1, & x \ge a. \end{cases}}
+#' \deqn{F(x) = \begin{cases} 0, & x < a, \\ 1, & x \ge a. \end{cases}}
 #'
 #' @param v The location of the point mass.
 #' @param log_density The log probability density of the point mass. This is
@@ -46,8 +46,8 @@
 #' \itemize{
 #'   \item When `sample = FALSE`: A BF Circulant Delta Distribution distribution
 #'     object (for  model building).
-#'   \item When `sample = TRUE`: A JAX array of samples drawn from the
-#'     BernoulliLogits distribution (for direct sampling).
+#'   \item When `sample = TRUE`: A JAX array of samples drawn from the Delta
+#'     distribution (for direct sampling).
 #'   \item When `create_obj = TRUE`: The raw BF Circulant Delta Distribution
 #'     object (for advanced use cases).
 #' }
