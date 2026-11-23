@@ -60,6 +60,9 @@ if (requireNamespace("reticulate", quietly = TRUE) &&
     }
     v
   }
+  # ppc_intervals_sorted, ppc_error_scatter and ppc_loo_pit are in
+  # development and not exposed on m$diag: call the Python module directly.
+  dev_ppc <- function() reticulate::import("BayesForge.Diagnostic.ppc")
   traces <- function(fig) reticulate::py_to_r(fig$data)
   trace_names <- function(tr) {
     vapply(tr, function(t) {
@@ -229,7 +232,7 @@ if (requireNamespace("reticulate", quietly = TRUE) &&
   ## ---- 3. ppc_intervals_sorted ---------------------------------------------
   test_that("ppc_intervals_sorted bounds match bayesplot on rows sorted by y", {
     s <- shared_lin()
-    fig <- s$m$diag$ppc_intervals_sorted(y = s$y, yrep = s$yrep, prob = 0.9)
+    fig <- dev_ppc()$ppc_intervals_sorted(y = s$y, yrep = s$yrep, prob = 0.9)
     ord <- order(s$y)   # the reference ordering: observations sorted by y
     iv <- as.data.frame(bayesplot:::ppc_intervals_data(
       s$y[ord], s$yrep[, ord, drop = FALSE], x = s$x[ord],
@@ -287,7 +290,7 @@ if (requireNamespace("reticulate", quietly = TRUE) &&
   ## ---- 6. ppc_error_scatter -------------------------------------------------
   test_that("ppc_error_scatter matches bayesplot ppc_error_scatter_avg", {
     s <- shared_lin()
-    fig <- s$m$diag$ppc_error_scatter(y = s$y, yrep = s$yrep)
+    fig <- dev_ppc()$ppc_error_scatter(y = s$y, yrep = s$yrep)
     # reference: the data frame of bayesplot's own plot: p$data$value carries
     # the mean errors y - E[yrep] and p$data$y_obs the observed y; BF plots,
     # like bayesplot, x = mean error and y = observed y
@@ -364,7 +367,7 @@ if (requireNamespace("reticulate", quietly = TRUE) &&
     s <- shared_lin()
     ll <- log_lik_matrix(s$m)
     expect_equal(dim(ll), dim(s$yrep))   # same draws as yrep
-    fig <- s$m$diag$ppc_loo_pit(y = s$y, yrep = s$yrep, log_likelihood = ll)
+    fig <- dev_ppc()$ppc_loo_pit(y = s$y, yrep = s$yrep, log_likelihood = ll)
 
     # the figure carries only the PIT density (last trace, on a fixed grid):
     # recompute the PIT vector through the PSIS path ppc_loo_pit uses and tie
