@@ -510,7 +510,7 @@ def roxygen_block(r_name, r_args, py_method, parsed, r_names):
     else:
         lines.append("#' @return A random variable (model building) or draws (`sample = TRUE`).")
     lines.append("#'")
-    lines.append("#' @examples")
+    lines.append("#' @examplesIf bf_available()")
     lines.append("#' \\donttest{")
     for ln in example_to_r(parsed["example"], r_name, r_names):
         lines += ["#' " + x for x in _wrap_r_call(ln)]
