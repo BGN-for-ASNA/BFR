@@ -79,12 +79,13 @@ expressed as a function of a logit parameter. This allows for more flexible
 modeling of count data.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.negative_binomial_logits(total_count = 5.0, logits = 0.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#Negative}

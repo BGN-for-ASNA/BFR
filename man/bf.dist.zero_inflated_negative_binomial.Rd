@@ -124,6 +124,7 @@ Here \eqn{P_{\text{NB}}(k;\mu,\alpha)} is the PMF of the negative binomial
 distribution for count \eqn{k}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -134,7 +135,7 @@ bf.dist.zero_inflated_negative_binomial(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://www.ewadirect.com/proceedings/tns/article/view/27624 "Social

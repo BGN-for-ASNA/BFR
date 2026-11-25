@@ -93,6 +93,7 @@ Also the equivalence to vec-form is given:
 \deqn{\mathrm{vec}(X) \sim \mathcal N_{np}\big(\mathrm{vec}(M),,V\otimes U\big). ; ; \text{([The Book of Statistical Proofs][3])}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -119,7 +120,7 @@ bf.dist.matrix_normal(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Matrix_normal_distribution "Matrix

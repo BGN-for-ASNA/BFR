@@ -100,6 +100,7 @@ distribution:
 \deqn{p(x) = \sum_{z=1}^K p(z = j); p(x \mid z = j) = \sum_{j=1}^K \pi_j ; f_j(x \mid \theta_j).}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -116,7 +117,7 @@ bf.dist.mixture(
     shape = c(10L)
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Mixture_distribution "Mixture distribution"

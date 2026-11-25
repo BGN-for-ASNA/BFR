@@ -45,6 +45,26 @@ check_env <- function(env_name = "BFR", verbose = TRUE) {
   exists
 }
 
+#' Is the BayesForge Python environment available?
+#'
+#' `TRUE` when the 'BFR' virtual environment exists (see [setup_env()]), or when a
+#' Python chosen by the user (`RETICULATE_PYTHON`, or one already initialised) has
+#' the `BayesForge` module. It never installs anything and does not start Python
+#' when none is configured, so it can guard examples and tests.
+#'
+#' @return A single logical value.
+#' @export
+#' @examples
+#' bf_available()
+bf_available <- function() {
+  if (check_env(verbose = FALSE)) {
+    return(TRUE)
+  }
+  user_python <- nzchar(Sys.getenv("RETICULATE_PYTHON")) ||
+    reticulate::py_available(initialize = FALSE)
+  isTRUE(user_python && reticulate::py_module_available("BayesForge"))
+}
+
 #' Find a Python interpreter able to host BayesForge
 #'
 #' @return Path to a Python >= 3.12 interpreter.

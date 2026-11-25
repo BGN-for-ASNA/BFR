@@ -95,12 +95,13 @@ Here \eqn{F_{\mathrm{Cauchy}}} is the standard Cauchy CDF \eqn{with
 parameters}\\mu,\\gamma)$.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.truncated_cauchy(loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Cauchy_distribution "Cauchy

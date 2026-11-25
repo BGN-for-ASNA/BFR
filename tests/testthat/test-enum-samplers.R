@@ -1,4 +1,6 @@
 test_that(".bf_infer translates enum = TRUE into NumPyro's infer dict", {
+  skip_if_not(isTRUE(tryCatch(reticulate::py_available(initialize = TRUE),
+                              error = function(e) FALSE)), "Python not available")
   none <- reticulate::py_none()
   expect_identical(.bf_infer(none, FALSE), none)
   expect_identical(.bf_infer(list(a = 1), FALSE), list(a = 1))

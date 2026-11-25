@@ -79,12 +79,13 @@ The probability density function (PDF) is:
 \deqn{F(x) = 1 - \exp!\bigl[-a (e^x - 1)\bigr], \quad x \ge 0.}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.gompertz(concentration = 1.0, rate = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Gompertz_distribution

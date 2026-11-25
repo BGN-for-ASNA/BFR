@@ -81,6 +81,7 @@ on [0, 1]. The Gaussian copula links the marginal distributions through a
 multivariate normal distribution.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -92,7 +93,7 @@ bf.dist.gaussian_copula(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#gaussiancopula}

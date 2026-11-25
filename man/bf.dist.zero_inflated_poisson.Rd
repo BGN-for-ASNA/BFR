@@ -101,12 +101,13 @@ Then:
 \pi)e^{-\lambda}}, plus the extra \eqn{\pi} mass.)
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.zero_inflated_poisson(gate = 0.3, rate = 2.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Zero-inflated_model "Zero-inflated model"

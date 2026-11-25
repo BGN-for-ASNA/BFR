@@ -87,6 +87,7 @@ independently results in one of several outcomes, and each outcome has a
 probability of occurring.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -96,7 +97,7 @@ bf.dist.multinomial_probs(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#multinomialprobs}

@@ -87,12 +87,13 @@ e^\{-\\lambda x\}, \\quad x \\ge 0 ]
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.gamma(concentration = 2.0, rate = 0.5, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://reference.wolfram.com/language/ref/GammaDistribution.html

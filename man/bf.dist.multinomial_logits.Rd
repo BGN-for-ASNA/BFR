@@ -109,6 +109,7 @@ count vector (x = (x_1,…,x_K)) with (\\sum_k x_k = n),
 and \eqn{p_k} is given by the softmax of logits.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -118,7 +119,7 @@ bf.dist.multinomial_logits(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Multinomial_distribution

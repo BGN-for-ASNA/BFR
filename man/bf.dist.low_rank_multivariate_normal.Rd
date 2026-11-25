@@ -86,6 +86,7 @@ For a (d)-dimensional random vector ( x \\in \\mathbb\{R\}^d ),
 where ( \\Sigma = F F^\\top + D ).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -98,7 +99,7 @@ bf.dist.low_rank_multivariate_normal(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Multivariate_normal_distribution}{Multivariate normal distribution – Wikipedia}

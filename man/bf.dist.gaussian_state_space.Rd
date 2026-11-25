@@ -86,6 +86,7 @@ use cases).
 Samples from a Gaussian state space model.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -96,7 +97,7 @@ bf.dist.gaussian_state_space(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#gaussianstate}

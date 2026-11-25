@@ -111,12 +111,13 @@ For \eqn{\mathbf x = (x_1,\dots,x_k)} with each \eqn{x_i \ge 0} integer and
 If \eqn{\sum_i x_i \neq n}, the probability is 0.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.multinomial(total_count = 10L, probs = jnp$array(c(0.2, 0.3, 0.5)), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://online.stat.psu.edu/stat504/book/export/html/667 "2.3 - The

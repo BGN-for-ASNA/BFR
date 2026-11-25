@@ -89,12 +89,13 @@ of integers. It is characterized by a lower bound (\code{low}) and an upper boun
 Otherwise (if \eqn{k} is outside the range), \eqn{P(X = k) = 0}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.discrete_uniform(low = 0, high = 5, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#discreteuniform}

@@ -99,6 +99,7 @@ via logits) and temperature parameter \eqn{\lambda > 0}. Then the PDF is:
 \deqn{p_{,\alpha,;\lambda}(x) = \frac{;\lambda,\alpha,x^{-\lambda - 1},(1 - x)^{-\lambda - 1};} {\Bigl(\alpha,x^{-\lambda} + (1 - x)^{-\lambda}\Bigr)^{2}}, \quad \text{for } 0 < x < 1.}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -108,7 +109,7 @@ bf.dist.relaxed_bernoulli(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]:

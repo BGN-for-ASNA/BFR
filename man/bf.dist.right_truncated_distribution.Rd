@@ -102,6 +102,7 @@ value \code{b} (meaning \verb{k ≤ b}), the new PMF, \code{P_T(X = k)}, is:
 \deqn{P_T(X=k) = \begin{cases} \frac{P(X=k)}{F(b)} & \text{if } k \le b \\ 0 & \text{if } k > b \end{cases}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -111,7 +112,7 @@ bf.dist.right_truncated_distribution(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Truncated_normal_distribution

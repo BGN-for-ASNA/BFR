@@ -102,12 +102,13 @@ where \eqn{p_k} is the probability of outcome \eqn{k}, and the sum is over
 all possible outcomes.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.categorical(probs = jnp$array(c(0.2, 0.3, 0.5)), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Categorical_distribution"Categorical

@@ -90,12 +90,13 @@ The probability mass function (PMF) of the Poisson distribution is given by:
 \deqn{P(K = k \mid \lambda) = \frac{e^{-\lambda} \lambda^k}{k!}, \quad k = 0, 1, 2, \dots}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.poisson(rate = 2.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Poisson_distribution#Probability_mass_function}{Wikipedia: Poisson distribution – PMF}

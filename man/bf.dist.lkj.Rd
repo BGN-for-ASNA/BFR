@@ -86,12 +86,13 @@ samples with small determinants.
 \deqn{P(M) \propto |\det(M)|^{\eta - 1}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.lkj(dimension = 2L, concentration = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Kumaraswamy_distribution

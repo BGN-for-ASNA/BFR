@@ -86,12 +86,13 @@ where:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.lkj_cholesky(dimension = 3L, concentration = 2.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://mc-stan.org/docs/2_21/functions-reference/cholesky-lkj-correlation-distribution.html

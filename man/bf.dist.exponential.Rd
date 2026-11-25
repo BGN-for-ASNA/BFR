@@ -80,12 +80,13 @@ For ( x \\ge 0 )
 Zhere ( \\lambda > 0 ) is the rate parameter (the mean is ( 1/\\lambda )).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.exponential(rate = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://reference.wolfram.com/language/ref/ExponentialDistribution.html

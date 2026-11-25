@@ -87,6 +87,7 @@ This parameterization is useful in hierarchical models, since one can put
 hyperpriors on (\\mu) (the “center”) and (\\kappa) (the “spread”).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -97,7 +98,7 @@ samples <- bf.dist.beta_proportion(
     shape = c(1000L)
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://mc-stan.org/docs/2_19/functions-reference/beta-proportion-distribution.html

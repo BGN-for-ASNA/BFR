@@ -103,12 +103,13 @@ probability over ([a,b]) is 1.
 For values (y < a) or (y > b), (f_Y(y) = 0).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.truncated_normal(loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Truncated_normal_distribution "Truncated

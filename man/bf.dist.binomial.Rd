@@ -115,12 +115,13 @@ the probability of each such configuration \eqn{p^k (1-p)^{n-k}}.
 \code{bf.dist.bfnomial()} is a deprecated alias of \code{bf.dist.binomial()}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.binomial(total_count = 10L, probs = 0.5, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Binomial_distribution "Binomial

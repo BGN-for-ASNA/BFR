@@ -87,12 +87,13 @@ A random variable \eqn{X \sim \text{Pareto}(\alpha, x_m)} takes values \eqn{x
 \deqn{f(x \mid \alpha, x_m) = \begin{cases} \dfrac{\alpha x_m^\alpha}{x^{\alpha + 1}}, & x \ge x_m, \\ 0, & x < x_m. \end{cases}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.pareto(scale = 2.0, alpha = 3.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Pareto_distribution#Probability_density_function}{Wikipedia: Pareto distribution – PDF}

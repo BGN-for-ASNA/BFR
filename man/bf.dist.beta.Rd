@@ -88,12 +88,13 @@ where :num\eqn{\alpha} and \eqn{\beta} are the concentration parameters, and
 \eqn{B(x, y)} is the Beta function.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.beta(concentration1 = 1.0, concentration0 = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Beta_distribution "Beta distribution -

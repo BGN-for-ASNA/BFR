@@ -27,6 +27,7 @@ handled, also inside \code{with(m$dist$plate(...), ...)} blocks. The
 distribution calls recognised are \code{bf.dist.*(...)} and \verb{m$dist$*(...)}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -37,4 +38,5 @@ model <- bf_model(function(x, y) {
   bf.dist.normal(a + b * x, s, obs = y)
 })
 }
+\dontshow{\}) # examplesIf}
 }

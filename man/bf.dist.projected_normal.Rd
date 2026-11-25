@@ -76,12 +76,13 @@ directional statistics (data on circles or spheres) and supports asymmetric
 and even multimodal behaviours depending on parameters.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.projected_normal(concentration = jnp$array(c(1.0, 3.0, 2.0)), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#projectednormal}

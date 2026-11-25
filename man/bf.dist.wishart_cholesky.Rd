@@ -107,12 +107,13 @@ this extra Jacobian (which penalizes or weights the diagonal entries of
 \eqn{L_W}).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.wishart_cholesky(concentration = 5.0, scale_matrix = jnp$eye(2L), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Wishart_distribution "Wishart

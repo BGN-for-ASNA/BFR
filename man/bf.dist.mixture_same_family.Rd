@@ -87,6 +87,7 @@ where each \eqn{f(x \mid \theta_i)} is from the same family with parameter
 \eqn{\theta_i}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -104,7 +105,7 @@ bf.dist.mixture_same_family(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://cseweb.ucsd.edu/~elkan/250Bwinter2011/mixturemodels.pdf}{Mixture distributions }
