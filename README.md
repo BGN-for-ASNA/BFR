@@ -6,7 +6,7 @@
 *Run bespoke models on CPU, GPU, or TPU with ease.*
 
 [![Website](https://img.shields.io/badge/Website-s--sosa.com/BI-blue?style=flat&logo=google-chrome&logoColor=white)](https://s-sosa.com/BI/)
-[![bioRxiv](https://img.shields.io/badge/bioRxiv-10.64898%2F2026.01.19.700318v1-BD271E?style=flat&logo=biorxiv&logoColor=white)](https://www.bforxiv.org/content/10.64898/2026.01.19.700318v1) 
+[![bioRxiv](https://img.shields.io/badge/bioRxiv-10.64898%2F2026.01.19.700318v1-BD271E?style=flat&logo=biorxiv&logoColor=white)](https://www.biorxiv.org/content/10.64898/2026.01.19.700318v1) 
 ![R](https://img.shields.io/badge/R-4.0+-276DC3?logo=r&logoColor=white)
 [![License: GPL (>= 3)](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -96,7 +96,7 @@ Leveraging Just-In-Time (JIT) compilation, BI outperforms traditional engines on
 | **BI (CPU)**   | `████████████`                 | **\~30x Faster**     |
 | **BI (GPU)**   | `██`                           | **\~200x Faster**    |
 
-*\> Comparison of execution time for a Social Relations Model. Source: [Sosa et al. (2026)](https://www.bforxiv.org/content/10.64898/2026.01.19.700318v1).*
+*\> Comparison of execution time for a Social Relations Model. Source: [Sosa et al. (2026)](https://www.biorxiv.org/content/10.64898/2026.01.19.700318v1).*
 
 
 ---
@@ -220,17 +220,17 @@ GPU support available on compatible systems with JAX GPU installation.
 
 ## Related Packages
 
--   [BI](https://pypi.org/project/BFR) - Python implementation
--   [BIJ](https://github.com/BGN-for-ASNA/pyBFR.jl) - J implementation
+-   [BayesForge](https://pypi.org/project/BayesForge/) - Python implementation
+-   [PyBayesForge.jl](https://github.com/BGN-for-ASNA/PyBayesForge.jl) - Julia implementation
 
 ---
 
 <div align="center">
 
 **BFR (BIR)**  
-Based on "The Bayesian Inference library for Python, R, Julia" by [Sosa, McElreath, & Ross (2026)](https://www.bforxiv.org/content/10.64898/2026.01.19.700318v1).
+Based on "The Bayesian Inference library for Python, R, Julia" by [Sosa, McElreath, & Ross (2026)](https://www.biorxiv.org/content/10.64898/2026.01.19.700318v1).
 
-[Official website](https://s-sosa.com/BI) \| [Issues](https://github.com/BGN-for-ASNA/BIJ/issues) \| [Quick Start](https://s-sosa.com/BI/start/Installation.html)
+[Official website](https://s-sosa.com/BI/) \| [Issues](https://github.com/BGN-for-ASNA/BFR/issues) \| [Quick Start](https://s-sosa.com/BI/start/Installation.html)
 
 © 2026 Bayesian Inference Team. Released under GPL-3.0.
 </div>

@@ -186,6 +186,23 @@ remove_env_name <- function(env_name = "BFR") {
 #' @return The Python object corresponding to `BayesForge$bf`.
 #' @keywords internal
 BF_load <- function() {
+  # Import BayesForge without the working directory on sys.path: a folder
+  # named "BayesForge" there (e.g. the R package folder inside
+  # BayesForge.Rcheck/, or a user's project folder) would otherwise be
+  # imported as an empty namespace package, without `bf`.
+  reticulate::py_run_string(paste(
+    "import os, sys",
+    "_bf_cwd = os.getcwd()",
+    "_bf_saved = list(sys.path)",
+    "_bf_mod = sys.modules.get('BayesForge')",
+    "if _bf_mod is not None and getattr(_bf_mod, '__file__', None) is None:",
+    "    del sys.modules['BayesForge']",
+    "sys.path[:] = [p for p in _bf_saved if p not in ('', '.') and os.path.abspath(p) != _bf_cwd]",
+    "try:",
+    "    import BayesForge",
+    "finally:",
+    "    sys.path[:] = _bf_saved",
+    sep = "\n"), local = TRUE, convert = FALSE)
   reticulate::import("BayesForge")$bf
 }
 

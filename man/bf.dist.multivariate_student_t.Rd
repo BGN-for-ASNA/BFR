@@ -119,7 +119,7 @@ bf.dist.multivariate_student_t(
 
 }
 \references{
-\href{https://en.wikipedia.org/wiki/Multivariate_Student\%27s_t-distribution}{Multivariate Student-t distribution – Wikipedia}
+\href{https://en.wikipedia.org/wiki/Multivariate_t-distribution}{Multivariate Student-t distribution – Wikipedia}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#multivariatestudentt}
