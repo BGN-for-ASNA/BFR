@@ -219,7 +219,7 @@ BF_starting_test <- function() {
     }
     gpu <- ask_yes_no("Use the GPU backend (Linux/WSL2 with an NVIDIA GPU only)? (Y/N): ") == "Y"
     setup_env(backend = if (gpu) "gpu" else "cpu")
-  } else if (!reticulate::py_available(initialize = FALSE)) {
+  } else if (!user_python) {
     # An environment made by an older release of this package: too old a
     # bayesforge, or a Python < 3.12. Checked before Python starts, so the
     # environment can still be upgraded or rebuilt.
