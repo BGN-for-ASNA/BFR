@@ -13,7 +13,7 @@ Description: A high-performance probabilistic programming library that aims to u
 Encoding: UTF-8
 LazyData: true
 Imports:
-    reticulate (>= 1.31),
+    reticulate (>= 1.45.0),
     abind,
     methods,
     parallel,
