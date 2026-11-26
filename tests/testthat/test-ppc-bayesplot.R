@@ -319,6 +319,10 @@ if (requireNamespace("reticulate", quietly = TRUE) &&
 
   ## ---- 8. ppc_bars ----------------------------------------------------------
   test_that("ppc_bars counts and 90% interval match bayesplot ppc_bars_data", {
+    # bayesplot < 1.12.0 drops zero counts in ppc_bars_data() (NA, and
+    # intervals without the zeros); fixed in 1.12.0 ("Fix missing counts").
+    skip_if(utils::packageVersion("bayesplot") < "1.12.0",
+            "bayesplot < 1.12.0 has missing counts in ppc_bars_data()")
     s <- shared_pois()
     fig <- s$m$diag$ppc_bars(y = s$y, yrep = s$yrep)
     bd <- as.data.frame(bayesplot:::ppc_bars_data(s$y, s$yrep, prob = 0.9,
