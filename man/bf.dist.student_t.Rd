@@ -92,7 +92,7 @@ The probability density function (pdf) of the Student's t distribution is:
 
 \deqn{f(x \mid \nu, \mu, \sigma) = \frac{\Gamma!\left(\frac{\nu+1}{2}\right)} {\Gamma!\left(\frac{\nu}{2}\right)\sqrt{\pi\nu}\sigma} \left[1 + \frac{1}{\nu} \left(\frac{x - \mu}{\sigma}\right)^2 \right]^{-\frac{\nu+1}{2}}}
 \itemize{
-\item The heavier tails (for small \eqn{ν}) allow for larger outliers.
+\item The heavier tails (for small \eqn{\nu }) allow for larger outliers.
 \item For \eqn{\nu \to \infty}, this approaches \eqn{\mathcal{N}(\mu, \sigma^2)}.
 }
 }

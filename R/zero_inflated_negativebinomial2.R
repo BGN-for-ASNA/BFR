@@ -7,14 +7,14 @@
 #' Binomial would predict. It assumes two latent processes:
 #'
 #' 1. With probability \eqn{\pi} (sometimes denoted \eqn{\psi} or
-#' “zero-inflation probability”) you are in a “structural zero” state → you
+#' “zero-inflation probability”) you are in a “structural zero” state -> you
 #' observe a zero.
 #' 2. With probability \eqn{1 - \pi}, you come from a regular Negative Binomial
 #' distribution (with parameters e.g. mean \eqn{\mu} and dispersion parameter
 #' \eqn{\alpha} or size/r parameter) and then you might observe zero or a
 #' positive count.
 #'
-#' Thus the model is a mixture of a point‐mass at zero + a Negative Binomial for
+#' Thus the model is a mixture of a point-mass at zero + a Negative Binomial for
 #' counts.
 #'
 #' This distribution combines a Negative Binomial distribution with a binary

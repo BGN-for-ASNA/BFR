@@ -85,7 +85,7 @@ positive definite matrices, often representing covariance matrices. It's
 commonly used in Bayesian statistics and machine learning, particularly in
 models involving covariance estimation.
 
-\deqn{\mathbf{X} \sim \text{Wishart}(\text{scale_matrix}=\mathbf{V}, \text{concentration}=n)}
+\deqn{\mathbf{X} \sim \text{Wishart}(\text{scale\_matrix}=\mathbf{V}, \text{concentration}=n)}
 
 where:
 \itemize{

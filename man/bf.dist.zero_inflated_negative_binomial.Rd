@@ -89,7 +89,7 @@ mean) \emph{and} (b) an excess of zero counts beyond what a standard Negative
 Binomial would predict. It assumes two latent processes:
 \enumerate{
 \item With probability \eqn{\pi} (sometimes denoted \eqn{\psi} or
-“zero-inflation probability”) you are in a “structural zero” state → you
+“zero-inflation probability”) you are in a “structural zero” state -> you
 observe a zero.
 \item With probability \eqn{1 - \pi}, you come from a regular Negative Binomial
 distribution (with parameters e.g. mean \eqn{\mu} and dispersion parameter
@@ -97,7 +97,7 @@ distribution (with parameters e.g. mean \eqn{\mu} and dispersion parameter
 positive count.
 }
 
-Thus the model is a mixture of a point‐mass at zero + a Negative Binomial for
+Thus the model is a mixture of a point-mass at zero + a Negative Binomial for
 counts.
 
 This distribution combines a Negative Binomial distribution with a binary

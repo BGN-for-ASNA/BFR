@@ -74,11 +74,11 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 }
 }
 \description{
-The Relaxed Bernoulli is a continuous distribution on the interval
+The Relaxed Bernoulli is a continuous distribution on the interval
 \eqn{(0,1)} that smoothly approximates the discrete Bernoulli distribution
 (which has support \eqn{{0,1}}). It was introduced to allow for
 \emph{differentiable} sampling of approximate binary random variables, which is
-useful in variational inference and other gradient‐based optimization
+useful in variational inference and other gradient-based optimization
 settings.
 
 The probability density function (PDF) is defined as:
@@ -92,7 +92,7 @@ e.g., converging toward 0.5 for very high \eqn{\tau}.
 \eqn{\ell = \log\frac{p}{1-p}}).
 }
 
-Let \eqn{X \in (0,1)} follow a Relaxed Bernoulli (Binary Concrete)
+Let \eqn{X \in (0,1)} follow a Relaxed Bernoulli (Binary Concrete)
 distribution with location parameter \eqn{\alpha > 0} (sometimes expressed
 via logits) and temperature parameter \eqn{\lambda > 0}. Then the PDF is:
 

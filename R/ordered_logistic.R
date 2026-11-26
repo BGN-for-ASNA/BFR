@@ -14,7 +14,7 @@
 #' < c_2 < \cdots < c_{K-1}}. Define also \eqn{c_0 = -\infty}, \eqn{c_K =
 #' +\infty}. Then for (k \\in \{1,\\dots,K\}),
 #'
-#' \deqn{\Pr(Y = k \mid \eta, c) = \begin{cases} 1 - \mathrm{logit}^{-1}(\eta - c_1), & k = 1, [6pt] \mathrm{logit}^{-1}(\eta - c_{k-1}) - \mathrm{logit}^{-1}(\eta - c_{k}), & 1 < k < K, [6pt] \mathrm{logit}^{-1}(\eta - c_{K-1}), & k = K. \end{cases}}
+#' \deqn{\Pr(Y = k \mid \eta, c) = \begin{cases} 1 - \mathrm{logit}^{-1}(\eta - c_1), & k = 1, \\[6pt] \mathrm{logit}^{-1}(\eta - c_{k-1}) - \mathrm{logit}^{-1}(\eta - c_{k}), & 1 < k < K, \\[6pt] \mathrm{logit}^{-1}(\eta - c_{K-1}), & k = K. \end{cases}}
 #'
 #' Here \eqn{\mathrm{logit}^{-1}(z) = \frac{1}{1 + e^{-z}}}. (\[Stan\]\[2\]) In
 #' other words:
@@ -25,7 +25,7 @@
 #'
 #' \deqn{\Pr(Y = k) = \Pr(Y \le k) - \Pr(Y \le k-1).}
 #'
-#' This formulation appears in e.g. the CDF‐link setup of the proportional odds
+#' This formulation appears in e.g. the CDF-link setup of the proportional odds
 #' model.
 #'
 #' @param predictor Prediction in real domain; typically this is output of a

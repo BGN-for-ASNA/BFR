@@ -73,9 +73,9 @@ Samples from a Levy distribution. The Lévy distribution is a continuous
 probability distribution on the positive real line (or shifted positive line)
 that is \emph{heavy-tailed}, \emph{skewed}, and arises naturally in connection with
 stable distributions specifically the case with stability index \eqn{\alpha =
-\tfrac12}. It is often used in contexts such as hitting‐time problems for
-Brownian motion, physics (e.g., van der Waals line‐shapes), and modelling
-very heavy‐tailed phenomena. Let (X) be a Lévy‐distributed random variable
+\tfrac12}. It is often used in contexts such as hitting-time problems for
+Brownian motion, physics (e.g., van der Waals line-shapes), and modelling
+very heavy-tailed phenomena. Let (X) be a Lévy-distributed random variable
 with \strong{location} parameter \eqn{\mu} and \strong{scale} parameter (c > 0). The
 support is \eqn{x \ge \mu}.
 

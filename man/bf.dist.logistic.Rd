@@ -78,13 +78,13 @@ two parameters: location and scale. It is often used to model growth
 processes and is closely related to the normal distribution.Its CDF is the
 logistic (sigmoid) function, which makes it appealing in modeling
 probabilities, logistic regression, and various growth models. It resembles
-the normal distribution in shape (bell‐shaped, symmetric) but has \strong{heavier
-tails} (i.e. more probability in the extremes) and simpler closed‐form
+the normal distribution in shape (bell-shaped, symmetric) but has \strong{heavier
+tails} (i.e. more probability in the extremes) and simpler closed-form
 expressions for the CDF.
 \itemize{
 \item \strong{Location parameter}: \eqn{\mu \in \mathbb{R}}\ — the center or “mean” of
 the distribution.
-\item \strong{Scale parameter}: \eqn{\s > 0}\ — controls the spread (similar role to
+\item \strong{Scale parameter}: \eqn{s > 0}\ — controls the spread (similar role to
 standard deviation).
 \item \strong{Support}: \eqn{\ x \in (-\infty, +\infty)}\.
 }

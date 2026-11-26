@@ -73,19 +73,19 @@ use cases).
 The Relaxed Bernoulli (logits) is a \strong{continuous} relaxation of the standard
 Bernoulli distribution, parameterised by logits (or probabilities) and a
 \strong{temperature} parameter. Rather than producing strictly 0 or 1, it produces
-values in the continuous interval (0, 1). As the temperature → 0 the
-distribution approximates a Bernoulli; as temperature → \eqn{\infty} the
+values in the continuous interval (0, 1). As the temperature -> 0 the
+distribution approximates a Bernoulli; as temperature -> \eqn{\infty} the
 distribution approximates a uniform distribution.
 
 It is used in variational inference and deep-learning contexts to allow
 gradient-based optimisation through otherwise discrete Bernoulli draws (see
 the “Concrete” or “Gumbel-Softmax” literature: The Concrete Distribution: A
 Continuous Relaxation of Discrete Random Variables  and Categorical
-Reparameterization with Gumbel‑Softmax ).
+Reparameterization with Gumbel-Softmax ).
 
 Because this is a continuous relaxation, the “density” is defined over the
 unit interval (0,1) rather than a pmf at \{0,1\}. Using logistic or
-Gumbel‐softmax style construction one can express it as:
+Gumbel-softmax style construction one can express it as:
 
 If logits = ( \\ell ), and temperature = ( \\tau > 0 ), then one generates
 

@@ -106,7 +106,7 @@ and (0) outside that interval.
 the upper bound (b) can be (+\\infty) (so only a lower truncation).
 ([Statistics How To][2])
 \item If both bounds are finite (i.e., doubly truncated), that is a valid and
-often‐used scenario.
+often-used scenario.
 }
 }
 \examples{

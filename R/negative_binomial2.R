@@ -16,7 +16,7 @@
 #' \deqn{P(k) = \frac{\Gamma(k + \alpha)}{\Gamma(k + 1) \Gamma(\alpha)} \left(\frac{\beta}{\alpha + \beta}\right)^k \left(1 - \frac{\beta}{\alpha + \beta}\right)^k}
 #'
 #' One commonly used form of the NB2 parameterisation is obtained via a
-#' Poisson‐Gamma mixture:
+#' Poisson-Gamma mixture:
 #'
 #' \deqn{Y \mid \lambda \sim \text{Poisson}(\lambda), \quad \lambda \sim \text{Gamma}!\Big(\frac{1}{\alpha},,\frac{\mu,\alpha}{1}\Big)}
 #'

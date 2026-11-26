@@ -19,7 +19,7 @@
 #'
 #' \deqn{f(x \mid \nu, \mu, \sigma) = \frac{\Gamma!\left(\frac{\nu+1}{2}\right)} {\Gamma!\left(\frac{\nu}{2}\right)\sqrt{\pi\nu}\sigma} \left[1 + \frac{1}{\nu} \left(\frac{x - \mu}{\sigma}\right)^2 \right]^{-\frac{\nu+1}{2}}}
 #'
-#' * The heavier tails (for small \eqn{ν}) allow for larger outliers.
+#' * The heavier tails (for small \eqn{\nu }) allow for larger outliers.
 #' * For \eqn{\nu \to \infty}, this approaches \eqn{\mathcal{N}(\mu, \sigma^2)}.
 #'
 #' @param df Degrees of freedom, must be positive.

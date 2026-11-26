@@ -8,7 +8,7 @@
 #' in Stan, for example) reparameterizes the Wishart over its **lower (or upper)
 #' triangular Cholesky factor**. This is useful for numerical stability and
 #' unconstrained parameterization in Bayesian sampling frameworks.
-#' * In this parameterization, one works with a lower‐triangular matrix
+#' * In this parameterization, one works with a lower-triangular matrix
 #' \eqn{L_W} such that
 #'
 #' \deqn{\Sigma = L_W L_W^\top}
@@ -19,7 +19,7 @@
 #' The probability density function (PDF) is given by:
 #'
 #' If the dimension is \eqn{K}, degrees of freedom \eqn{\nu > K - 1}, and
-#' \eqn{L_S} is the lower‐triangular Cholesky factor of the scale matrix
+#' \eqn{L_S} is the lower-triangular Cholesky factor of the scale matrix
 #' \eqn{S}, then the log density for \eqn{L_W} under the **wishart_cholesky**
 #' distribution is:
 #'

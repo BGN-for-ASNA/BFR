@@ -89,7 +89,7 @@ range.
 
 If the original probability density function is \code{f(x)} and the cumulative
 distribution function is \code{F(x)}, and the distribution is right-truncated at a
-value \code{b} (meaning \verb{x ≤ b}), the new PDF, \code{f_T(x)}, is:
+value \code{b} (meaning \code{x <= b}), the new PDF, \code{f_T(x)}, is:
 
 \deqn{f_{\rm trunc}(x \mid X \le b) = \begin{cases} \displaystyle \frac{,f(x),}{,F(b),}, & x \le b, \\ 0, & x > b. \end{cases}}
 
@@ -97,7 +97,7 @@ value \code{b} (meaning \verb{x ≤ b}), the new PDF, \code{f_T(x)}, is:
 
 If the original probability mass function is \code{P(X = k)} and the cumulative
 distribution function is \code{F(k)}, and the distribution is right-truncated at a
-value \code{b} (meaning \verb{k ≤ b}), the new PMF, \code{P_T(X = k)}, is:
+value \code{b} (meaning \code{k <= b}), the new PMF, \code{P_T(X = k)}, is:
 
 \deqn{P_T(X=k) = \begin{cases} \frac{P(X=k)}{F(b)} & \text{if } k \le b \\ 0 & \text{if } k > b \end{cases}}
 }

@@ -30,7 +30,7 @@
 #' the upper bound (b) can be (+\\infty) (so only a lower truncation).
 #' (\[Statistics How To\]\[2\])
 #' * If both bounds are finite (i.e., doubly truncated), that is a valid and
-#' often‐used scenario.
+#' often-used scenario.
 #'
 #' @param base_dist The base distribution to be truncated. This should be a
 #'   univariate distribution. Currently, only the following distributions are

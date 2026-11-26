@@ -128,12 +128,29 @@ def math_to_rd(text):
     """
     keep = []
 
+    def fix_latex(s):
+        # Repairs for the PDF manual (LaTeX), where a docstring's math is
+        # often from a non-raw Python string:
+        # - a cases row break "\\[6pt]" arrives as "\[6pt]" or "[6pt]";
+        s = re.sub(r"(?:\\{1,2})?\[(\d+(?:\.\d+)?(?:pt|mm|em|ex))\]", r"\\\\[\1]", s)
+        # - "_" inside \text{} is a subscript outside math mode;
+        s = re.sub(r"\\text\{([^{}]*)\}", lambda m: "\\text{" + re.sub(r"(?<!\\)_", r"\\_", m.group(1)) + "}", s)
+        # - "\s" is not a LaTeX macro (typo for s);
+        s = re.sub(r"\\s(?![A-Za-z])", "s", s)
+        # - Greek letters typed as Unicode.
+        return s.replace("\u03bd", "\\nu ")
+
     def stash(macro):
         def f(m):
-            keep.append(f"\\{macro}{{" + " ".join(m.group(1).split()).replace("%", "\\%") + "}")
+            keep.append(f"\\{macro}{{" + fix_latex(" ".join(m.group(1).split())).replace("%", "\\%") + "}")
             return f"\x00{len(keep) - 1}\x00"
         return f
 
+    # Characters the PDF manual's LaTeX (inputenc utf8) cannot typeset.
+    text = text.translate(str.maketrans({
+        " ": " ", " ": " ", "‐": "-", "‑": "-",
+        "≤": "<=", "≥": ">=", "→": "->",
+    }))
     text = re.sub(r"\$\$(.+?)\$\$", lambda m: "\n" + stash("deqn")(m) + "\n", text, flags=re.S)
     text = re.sub(r"\\\[(.+?)\\\]", lambda m: "\n" + stash("deqn")(m) + "\n", text, flags=re.S)
     text = re.sub(r"\\\((.+?)\\\)", stash("eqn"), text, flags=re.S)

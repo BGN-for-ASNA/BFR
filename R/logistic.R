@@ -8,13 +8,13 @@
 #' processes and is closely related to the normal distribution.Its CDF is the
 #' logistic (sigmoid) function, which makes it appealing in modeling
 #' probabilities, logistic regression, and various growth models. It resembles
-#' the normal distribution in shape (bell‐shaped, symmetric) but has **heavier
-#' tails** (i.e. more probability in the extremes) and simpler closed‐form
+#' the normal distribution in shape (bell-shaped, symmetric) but has **heavier
+#' tails** (i.e. more probability in the extremes) and simpler closed-form
 #' expressions for the CDF.
 #'
 #' * **Location parameter**: \eqn{\mu \in \mathbb{R}}\ — the center or “mean” of
 #' the distribution.
-#' * **Scale parameter**: \eqn{\s > 0}\ — controls the spread (similar role to
+#' * **Scale parameter**: \eqn{s > 0}\ — controls the spread (similar role to
 #' standard deviation).
 #' * **Support**: \eqn{\ x \in (-\infty, +\infty)}\.
 #'

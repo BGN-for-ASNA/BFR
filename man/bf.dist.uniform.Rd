@@ -74,7 +74,7 @@ in the interval ([a, b]) is \strong{equally likely}. It is widely used for
 modeling complete randomness within a fixed range, random sampling, and as a
 building block for other distributions.
 
-\deqn{f(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, [2mm] 0, & \text{otherwise}. \end{cases}}
+\deqn{f(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, \\[2mm] 0, & \text{otherwise}. \end{cases}}
 }
 \examples{
 \dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}

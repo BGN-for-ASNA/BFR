@@ -6,7 +6,7 @@
 #' modeling complete randomness within a fixed range, random sampling, and as a
 #' building block for other distributions.
 #'
-#' \deqn{f(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, [2mm] 0, & \text{otherwise}. \end{cases}}
+#' \deqn{f(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, \\[2mm] 0, & \text{otherwise}. \end{cases}}
 #'
 #' @param low The lower bound of the uniform interval.
 #' @param high The upper bound of the uniform interval.

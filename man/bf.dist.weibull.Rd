@@ -77,11 +77,11 @@ The Weibull distribution is widely used for modeling \strong{lifetime or
 reliability data}. Its shape parameter (k) controls the hazard function:
 \itemize{
 \item (k < 1): decreasing hazard (infant mortality)
-\item (k = 1): constant hazard → reduces to \strong{Exponential distribution}
+\item (k = 1): constant hazard -> reduces to \strong{Exponential distribution}
 \item (k > 1): increasing hazard (aging/failure over time)
 }
 
-\deqn{f(x \mid \lambda, k) = \begin{cases} \dfrac{k}{\lambda} \left(\dfrac{x}{\lambda}\right)^{k-1} e^{-(x/\lambda)^k}, & x \ge 0, [2mm] 0, & x < 0 \end{cases}}
+\deqn{f(x \mid \lambda, k) = \begin{cases} \dfrac{k}{\lambda} \left(\dfrac{x}{\lambda}\right)^{k-1} e^{-(x/\lambda)^k}, & x \ge 0, \\[2mm] 0, & x < 0 \end{cases}}
 }
 \examples{
 \dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}

@@ -18,7 +18,7 @@
 #'
 #' If the original probability density function is `f(x)` and the cumulative
 #' distribution function is `F(x)`, and the distribution is right-truncated at a
-#' value `b` (meaning `x ≤ b`), the new PDF, `f_T(x)`, is:
+#' value `b` (meaning `x <= b`), the new PDF, `f_T(x)`, is:
 #'
 #' \deqn{f_{\rm trunc}(x \mid X \le b) = \begin{cases} \displaystyle \frac{,f(x),}{,F(b),}, & x \le b, \\ 0, & x > b. \end{cases}}
 #'
@@ -26,7 +26,7 @@
 #'
 #' If the original probability mass function is `P(X = k)` and the cumulative
 #' distribution function is `F(k)`, and the distribution is right-truncated at a
-#' value `b` (meaning `k ≤ b`), the new PMF, `P_T(X = k)`, is:
+#' value `b` (meaning `k <= b`), the new PMF, `P_T(X = k)`, is:
 #'
 #' \deqn{P_T(X=k) = \begin{cases} \frac{P(X=k)}{F(b)} & \text{if } k \le b \\ 0 & \text{if } k > b \end{cases}}
 #'

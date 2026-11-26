@@ -76,7 +76,7 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 \description{
 A truncated normal distribution is derived from a normal (Gaussian) random
 variable by restricting (truncating) its domain to an interval \eqn{[a, b]}
-(which could be one‐sided, e.g., (a) only or (b) only). It is defined by its
+(which could be one-sided, e.g., (a) only or (b) only). It is defined by its
 location (\code{loc}), scale (\code{scale}), lower bound  \eqn{a} (\code{low}), and upper
 bound \eqn{b} (\code{high}). In effect: if \eqn{X \sim \mathcal N(\mu, \sigma^2)},
 then the truncated version \eqn{Y = X | (a \le X \le b)} has the same “shape”
@@ -85,7 +85,7 @@ values outside a range are impossible or not observed (e.g., measurement
 limits, natural bounds).
 
 Let \eqn{X \sim \mathcal N(\mu, \sigma^2)}. Define truncation bounds \eqn{a <
-b} (could be \eqn{a = -\infty} or \eqn{b = +\infty} for one‐sided
+b} (could be \eqn{a = -\infty} or \eqn{b = +\infty} for one-sided
 truncation). Then for \eqn{y \in [a,b]},
 
 \deqn{f_Y(y) = \frac{1}{\sigma} ; \frac{\varphi!\bigl(\frac{y - \mu}{\sigma}\bigr)}{\Phi!\bigl(\frac{b - \mu}{\sigma}\bigr) - \Phi!\bigl(\frac{a - \mu}{\sigma}\bigr)} ,}

@@ -68,7 +68,7 @@ instead of a random variable (e.g. to build mixtures). Defaults to \code{FALSE}.
 }
 }
 \description{
-The Zero-Inflated Poisson distribution is a discrete count‐distribution
+The Zero-Inflated Poisson distribution is a discrete count-distribution
 designed for data with \emph{more zeros} than would be expected under a standard
 Poisson. Essentially, it assumes two underlying processes:
 \itemize{
@@ -80,7 +80,7 @@ distribution with parameter \eqn{\lambda}.
 
 This results in a mixture distribution that places more mass at zero than a
 Poisson alone would. It’s widely used in, for instance, ecology (species
-counts with many zeros), insurance/claims problems, and any count‐data
+counts with many zeros), insurance/claims problems, and any count-data
 setting with excess zeros.
 
 The probability density function (PDF) is given by:
@@ -95,7 +95,7 @@ zero)
 
 Then:
 
-\deqn{P(X = k) = \begin{cases} \pi ;+; (1 - \pi),e^{-\lambda}, & \text{if } k = 0, [6pt] (1 - \pi),\dfrac{\lambda^k e^{-\lambda}}{k!}, & \text{if } k = 1,2,3,\dots \end{cases}}
+\deqn{P(X = k) = \begin{cases} \pi ;+; (1 - \pi),e^{-\lambda}, & \text{if } k = 0, \\[6pt] (1 - \pi),\dfrac{\lambda^k e^{-\lambda}}{k!}, & \text{if } k = 1,2,3,\dots \end{cases}}
 
 (Here the Poisson component contributes also a mass at zero of \eqn{(1 -
 \pi)e^{-\lambda}}, plus the extra \eqn{\pi} mass.)
