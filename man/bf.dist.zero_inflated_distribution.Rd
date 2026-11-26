@@ -104,6 +104,7 @@ risk) and others follow a regular count process (with risk).
 \deqn{P(X=0) = \pi + (1 - \pi),P_{\text{base}}(0), \quad P(X=k) = (1 - \pi),P_{\text{base}}(k), ; k > 0.}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -113,7 +114,7 @@ bf.dist.zero_inflated_distribution(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Zero-inflated_model "Zero-inflated

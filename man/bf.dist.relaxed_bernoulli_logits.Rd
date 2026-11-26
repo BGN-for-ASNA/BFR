@@ -99,12 +99,13 @@ logistic/Gumbel, but is somewhat involved (including Jacobian of sigmoid
 transform).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.relaxed_bernoulli_logits(temperature = 1.0, logits = 0.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://arxiv.org/pdf/1611.00712

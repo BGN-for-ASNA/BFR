@@ -85,12 +85,13 @@ where:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.inverse_gamma(concentration = 2.0, rate = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#inversegamma}

@@ -88,12 +88,13 @@ laplace_asymmetric takes 'kappa' as a shape parameter for \eqn{\kappa}. For
 \eqn{\kappa = 1}, it is identical to a Laplace distribution.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.asymmetric_laplace(loc = 0.0, scale = 1.0, asymmetry = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#asymmetriclaplace}

@@ -84,6 +84,7 @@ probability (p), failure probability (q = 1 - p):
 \deqn{\Pr(X = k) ;=; \binom{k + r - 1}{k} ; p^r ; q^k, \quad k = 0,1,2,\dots}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -93,7 +94,7 @@ bf.dist.negative_binomial(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Negative_binomial_distribution

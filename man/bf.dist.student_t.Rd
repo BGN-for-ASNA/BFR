@@ -97,12 +97,13 @@ The probability density function (pdf) of the Student's t distribution is:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.student_t(df = 2, loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Student\%27s_t-distribution#Probability_density_function}{Wikipedia – Student’s t distribution: PDF}

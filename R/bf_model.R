@@ -14,7 +14,7 @@
 #'
 #' @param f A model function.
 #' @return The same function, with `name =` added to its distribution calls.
-#' @examples
+#' @examplesIf bf_available()
 #' \donttest{
 #' library(BayesForge)
 #' m <- importBF(platform = "cpu")

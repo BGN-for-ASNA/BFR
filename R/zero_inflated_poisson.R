@@ -68,7 +68,7 @@
 #'   \item The raw BF distribution object (when `create_obj = TRUE`).
 #' }
 #'
-#' @examples
+#' @examplesIf bf_available()
 #' \donttest{
 #' library(BayesForge)
 #' m <- importBF(platform = "cpu")

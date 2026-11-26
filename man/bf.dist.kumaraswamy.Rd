@@ -85,12 +85,13 @@ where:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.kumaraswamy(concentration1 = 2.0, concentration0 = 3.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#kumaraswamy}

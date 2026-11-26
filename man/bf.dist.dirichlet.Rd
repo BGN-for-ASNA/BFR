@@ -85,12 +85,13 @@ multivariate Beta function (the normalization constant):
 \deqn{B(\alpha) = \frac{\prod_{i=1}^K \Gamma(\alpha_i)}{\Gamma\left(\sum_{i=1}^K \alpha_i\right)}.}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.dirichlet(concentration = jnp$array(c(1.0, 1.0, 1.0)), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://distribution-explorer.github.io/multivariate_continuous/dirichlet.html

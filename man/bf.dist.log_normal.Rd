@@ -85,12 +85,13 @@ compounding factors dominate (e.g. stock prices, income, sizes of biological
 organisms).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.log_normal(loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Log-normal_distribution

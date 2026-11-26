@@ -106,6 +106,7 @@ probabilities vary according to the Dirichlet prior.
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -115,7 +116,7 @@ counts <- bf.dist.dirichlet_multinomial(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Dirichlet-multinomial_distribution

@@ -85,12 +85,13 @@ distributions.
 \deqn{F(x) = \begin{cases} 0, & x < a, \\ 1, & x \ge a. \end{cases}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.delta(v = 0.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#delta}

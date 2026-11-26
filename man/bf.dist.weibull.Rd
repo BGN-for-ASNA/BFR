@@ -84,12 +84,13 @@ reliability data}. Its shape parameter (k) controls the hazard function:
 \deqn{f(x \mid \lambda, k) = \begin{cases} \dfrac{k}{\lambda} \left(\dfrac{x}{\lambda}\right)^{k-1} e^{-(x/\lambda)^k}, & x \ge 0, [2mm] 0, & x < 0 \end{cases}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.weibull(scale = 1.0, concentration = 2.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Weibull_distribution#Probability_density_function}{Wikipedia – Weibull distribution}

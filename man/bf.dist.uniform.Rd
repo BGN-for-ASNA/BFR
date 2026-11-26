@@ -77,12 +77,13 @@ building block for other distributions.
 \deqn{f(x) = \begin{cases} \dfrac{1}{b - a}, & a \le x \le b, [2mm] 0, & \text{otherwise}. \end{cases}}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.uniform(low = 0.0, high = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Uniform_distribution_\%28continuous\%29}{Wikipedia – Uniform distribution (continuous)}

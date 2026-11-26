@@ -103,12 +103,13 @@ Outside \eqn{[a, b]}, \eqn{f(x) = 0}.
 (For \eqn{x < a}, \eqn{F(x) = 0}; for \eqn{x > b}, \eqn{F(x) = 1}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.log_uniform(low = 0.1, high = 10.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Reciprocal_distribution

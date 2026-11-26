@@ -85,12 +85,13 @@ ensures that the sum of the components is 0 (since \eqn{J \mathbf{x} =
 \mathbf{1} \sum_i x_i}).
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.zero_sum_normal(scale = 1.0, event_shape = c(2L), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://www.pymc.io/projects/docs/en/latest/api/distributions/generated/pymc.ZeroSumNormal.html

@@ -83,12 +83,13 @@ sides of the distribution, representing the proportion of probability density
 that falls to the left-hand side.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.asymmetric_laplace_quantile(loc = 0.0, scale = 1.0, quantile = 0.5, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#asymmetriclaplacequantile}

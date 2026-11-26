@@ -123,6 +123,7 @@ scale=1.0, create_obj = TRUE),bf.dist.normal  (loc=0.0, scale=1.0,
 create_obj = TRUE)], sample = TRUE )
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -138,7 +139,7 @@ bf.dist.mixture_general(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]:

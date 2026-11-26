@@ -98,6 +98,7 @@ where:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -116,10 +117,10 @@ bf.dist.multivariate_student_t(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
-\href{https://en.wikipedia.org/wiki/Multivariate_Student\%27s_t-distribution}{Multivariate Student-t distribution – Wikipedia}
+\href{https://en.wikipedia.org/wiki/Multivariate_t-distribution}{Multivariate Student-t distribution – Wikipedia}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#multivariatestudentt}

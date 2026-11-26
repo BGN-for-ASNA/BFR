@@ -109,12 +109,13 @@ where:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.wishart(concentration = 5.0, scale_matrix = jnp$eye(2L), sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Wishart_distribution}{Wikipedia – Wishart distribution}

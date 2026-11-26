@@ -100,6 +100,7 @@ where (\eqn{B(u,v)}) is the Beta function \eqn{(B(u,v) =
 \frac{\Gamma(u),\Gamma(v)}{\Gamma(u+v)})}.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -110,7 +111,7 @@ bf.dist.beta_binomial(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Beta-binomial_distribution

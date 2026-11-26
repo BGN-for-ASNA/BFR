@@ -88,12 +88,13 @@ value less than or equal to ( x ), incorporating the overdispersion
 introduced by the Gamma distribution.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.gamma_poisson(concentration = 1.0, rate = 2.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1] https://www.statisticshowto.com/gamma-poisson-distribution

@@ -85,12 +85,13 @@ For ( x \\ge x_\{\\min\} > 0 ):
 where \eqn{\alpha > 1} is the shape (scaling) parameter.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.lower_truncated_power_law(alpha = -2.0, low = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 \href{https://en.wikipedia.org/wiki/Power_law#Continuous_power-law_distribution}{Power-law distribution – Wikipedia}

@@ -79,12 +79,13 @@ of maximum values in a sequence of independent random variables.
 \deqn{F(x;\mu,\beta) = \exp\bigl( -\exp\bigl( -\tfrac{x - \mu}{\beta} \bigr) \bigr), \quad x \in \mathbb{R}.}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.gumbel(loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Gumbel_distribution

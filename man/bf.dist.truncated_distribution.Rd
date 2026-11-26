@@ -110,6 +110,7 @@ often‐used scenario.
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -120,7 +121,7 @@ bf.dist.truncated_distribution(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [1]: https://en.wikipedia.org/wiki/Truncated_distribution "Truncated

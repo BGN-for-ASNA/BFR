@@ -81,12 +81,13 @@ step is the previous value plus a Gaussian-distributed increment. The
 distribution is over the entire path.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 path <- bf.dist.gaussian_random_walk(scale = 0.5, num_steps = 100L, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#gaussianrandomwalk}

@@ -98,12 +98,13 @@ Equivalently:
 \deqn{F(x) = \frac12 + \frac12 \tanh!\bigl(\frac{x - \mu}{2s}\bigr).}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.logistic(loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Logistic_distribution

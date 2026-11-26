@@ -52,7 +52,7 @@
 #'
 #' @return A random variable (model building) or draws (`sample = TRUE`).
 #'
-#' @examples
+#' @examplesIf bf_available()
 #' \donttest{
 #' library(BayesForge)
 #' m <- importBF(platform = "cpu")

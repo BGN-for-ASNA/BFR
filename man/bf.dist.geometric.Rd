@@ -82,12 +82,13 @@ before the first success). Each trial has the same probability of success
 \deqn{P(X = k) = (1 - p)^{,k-1} ; p,\quad k = 1,2,\dots}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.geometric(probs = 0.5, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://www.britannica.com/topic/geometric-distribution "Geometric

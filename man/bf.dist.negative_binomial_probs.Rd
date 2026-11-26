@@ -77,6 +77,7 @@ implementation, the 'concentration' parameter is derived from 'total_count'
 and the 'rate' parameter is derived from 'probs'.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -86,7 +87,7 @@ bf.dist.negative_binomial_probs(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#negativebinomialprobs}

@@ -98,6 +98,7 @@ a)). The PDF and CDF of (Y) are:
 \deqn{F_Y(y) = P(Y \le y) = \frac{F_X(y) - F_X(a)}{1 - F_X(a)} .}
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -107,7 +108,7 @@ bf.dist.left_truncated_distribution(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 https://en.wikipedia.org/wiki/Truncated_distribution

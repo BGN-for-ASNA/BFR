@@ -64,7 +64,7 @@
 #'     use cases).
 #' }
 #'
-#' @examples
+#' @examplesIf bf_available()
 #' \donttest{
 #' library(BayesForge)
 #' m <- importBF(platform = "cpu")
@@ -88,7 +88,7 @@
 #'
 #' @references
 #' [Multivariate Student-t distribution –
-#' Wikipedia](https://en.wikipedia.org/wiki/Multivariate_Student%27s_t-distribution)
+#' Wikipedia](https://en.wikipedia.org/wiki/Multivariate_t-distribution)
 #'
 #' @export
 bf.dist.multivariate_student_t=function(df, loc=0.0, scale_tril=py_none(), validate_args=py_none(), name='x', obs=py_none(), mask=py_none(), sample=FALSE, seed = py_none(), shape=c(), event=0, create_obj=FALSE, to_jax = TRUE) {

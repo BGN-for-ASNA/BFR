@@ -57,7 +57,7 @@
 #'     cases).
 #' }
 #'
-#' @examples
+#' @examplesIf bf_available()
 #' \donttest{
 #' library(BayesForge)
 #' m <- importBF(platform = "cpu")

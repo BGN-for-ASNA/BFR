@@ -82,12 +82,13 @@ distribution, this distribution is infinitely differentiable everywhere, and
 is thus suitable for HMC and Laplace approximation.
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.soft_laplace(loc = 0.0, scale = 1.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://num.pyro.ai/en/stable/distributions.html#softlaplace}

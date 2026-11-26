@@ -86,6 +86,7 @@ where:
 }
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
@@ -96,5 +97,5 @@ bf.dist.euler_maruyama(
     sample = TRUE
 )
 }
-
+\dontshow{\}) # examplesIf}
 }

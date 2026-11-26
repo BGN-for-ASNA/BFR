@@ -7,3 +7,4 @@
 ^tests/to_brm/temp_fit\.rds$
 ^tools$
 ^tests/testthat/_problems$
+^cran-comments\.md$

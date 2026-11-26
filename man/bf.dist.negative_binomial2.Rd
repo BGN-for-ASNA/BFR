@@ -99,12 +99,13 @@ This parameterisation matches the NB2 form with mean \eqn{\mu} and dispersion
 \eqn{\alpha}. (See Hilbe (2011) forderivation.)
 }
 \examples{
+\dontshow{if (bf_available()) withAutoprint(\{ # examplesIf}
 \donttest{
 library(BayesForge)
 m <- importBF(platform = "cpu")
 bf.dist.negative_binomial2(mean = 2.0, concentration = 3.0, sample = TRUE)
 }
-
+\dontshow{\}) # examplesIf}
 }
 \references{
 [Negative Binomial
