@@ -10,7 +10,7 @@ bf_available()
 A single logical value.
 }
 \description{
-\code{TRUE} when the 'BFR' virtual environment exists (see \code{\link[=setup_env]{setup_env()}}), or when a
+\code{TRUE} when the 'BFR' virtual environment exists and is up to date (see \code{\link[=setup_env]{setup_env()}}), or when a
 Python chosen by the user (\code{RETICULATE_PYTHON}, or one already initialised) has
 the \code{BayesForge} module. It never installs anything and does not start Python
 when none is configured, so it can guard examples and tests.

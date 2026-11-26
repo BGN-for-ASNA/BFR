@@ -25,7 +25,10 @@
   `bayesforge` Python package; `importBF()` offers to create it in interactive
   sessions. A Python chosen by the user (`RETICULATE_PYTHON`) that has
   BayesForge is used as is.
-* Requires `bayesforge` >= 0.0.59 and Python >= 3.12.
+* Requires `bayesforge` >= 0.0.59 and Python >= 3.12. An environment made by
+  BayesForge 0.0.1 (older `bayesforge`, or Python < 3.12) is detected by
+  `importBF()`, which offers to update it; `setup_env()` upgrades it, and
+  rebuilds it when its Python is older than 3.12.
 
 ## Bug fixes
 

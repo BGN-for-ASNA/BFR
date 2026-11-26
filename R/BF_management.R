@@ -47,7 +47,7 @@ check_env <- function(env_name = "BFR", verbose = TRUE) {
 
 #' Is the BayesForge Python environment available?
 #'
-#' `TRUE` when the 'BFR' virtual environment exists (see [setup_env()]), or when a
+#' `TRUE` when the 'BFR' virtual environment exists and is up to date (see [setup_env()]), or when a
 #' Python chosen by the user (`RETICULATE_PYTHON`, or one already initialised) has
 #' the `BayesForge` module. It never installs anything and does not start Python
 #' when none is configured, so it can guard examples and tests.
@@ -58,7 +58,13 @@ check_env <- function(env_name = "BFR", verbose = TRUE) {
 #' bf_available()
 bf_available <- function() {
   if (check_env(verbose = FALSE)) {
-    return(TRUE)
+    # Only an up-to-date environment counts (one made by an older release
+    # makes importBF() ask for an update). Cached for the session.
+    if (is.null(.BF_env$env_ok)) {
+      st <- env_status()
+      .BF_env$env_ok <- .bf_python_ok(st$python) && .bf_bayesforge_ok(st$bayesforge)
+    }
+    if (.BF_env$env_ok) return(TRUE)
   }
   user_python <- nzchar(Sys.getenv("RETICULATE_PYTHON")) ||
     reticulate::py_available(initialize = FALSE)
@@ -109,6 +115,15 @@ find_python <- function() {
 #' @export
 setup_env <- function(env_name = "BFR", backend = c("cpu", "gpu"), python = NULL) {
   backend <- match.arg(backend)
+  if (reticulate::virtualenv_exists(envname = env_name) &&
+      !.bf_python_ok(env_status(env_name)$python)) {
+    # bayesforge needs Python >= 3.12: an environment made for an older
+    # release of this package is rebuilt.
+    packageStartupMessage("The '", env_name, "' environment uses Python ",
+                          env_status(env_name)$python, "; recreating it with Python ",
+                          .bf_python_version, ".")
+    reticulate::virtualenv_remove(envname = env_name, confirm = FALSE)
+  }
   if (!reticulate::virtualenv_exists(envname = env_name)) {
     packageStartupMessage("Creating virtual environment: ", env_name)
     if (is.null(python)) python <- find_python()
@@ -119,6 +134,38 @@ setup_env <- function(env_name = "BFR", backend = c("cpu", "gpu"), python = NULL
   reticulate::virtualenv_install(envname = env_name, packages = pkg)
   packageStartupMessage("BayesForge Python environment ready.")
   invisible(reticulate::virtualenv_python(envname = env_name))
+}
+
+#' Versions of Python and bayesforge in a virtual environment
+#'
+#' Asks the environment's own interpreter, so the R session does not start
+#' Python (it could then no longer be switched or rebuilt).
+#'
+#' @param env_name Name of the virtual environment.
+#' @return A list with `python` and `bayesforge` (character, `NA` if unknown).
+#' @keywords internal
+env_status <- function(env_name = "BFR") {
+  py <- reticulate::virtualenv_python(env_name)
+  ask <- function(code) {
+    out <- tryCatch(suppressWarnings(system2(py, c("-c", shQuote(code)), stdout = TRUE, stderr = FALSE)),
+                    error = function(e) character())
+    if (length(out) && !is.null(attr(out, "status"))) out <- character()
+    if (length(out)) out[length(out)] else NA_character_
+  }
+  list(
+    python = ask("import sys; print('%d.%d.%d' % sys.version_info[:3])"),
+    bayesforge = ask("import importlib.metadata as m; print(m.version('bayesforge'))")
+  )
+}
+
+.bf_min_version <- function(spec) sub("^\\s*>=\\s*", "", spec)
+
+.bf_python_ok <- function(v) {
+  !is.na(v) && utils::compareVersion(v, .bf_min_version(.bf_python_version)) >= 0
+}
+
+.bf_bayesforge_ok <- function(v) {
+  !is.na(v) && utils::compareVersion(v, .bf_min_version(.bf_bayesforge_version)) >= 0
 }
 
 #' Bind this R session to the BayesForge Python environment
@@ -172,6 +219,23 @@ BF_starting_test <- function() {
     }
     gpu <- ask_yes_no("Use the GPU backend (Linux/WSL2 with an NVIDIA GPU only)? (Y/N): ") == "Y"
     setup_env(backend = if (gpu) "gpu" else "cpu")
+  } else if (!reticulate::py_available(initialize = FALSE)) {
+    # An environment made by an older release of this package: too old a
+    # bayesforge, or a Python < 3.12. Checked before Python starts, so the
+    # environment can still be upgraded or rebuilt.
+    st <- env_status()
+    if (!.bf_python_ok(st$python) || !.bf_bayesforge_ok(st$bayesforge)) {
+      what <- paste0("bayesforge ", if (is.na(st$bayesforge)) "not installed" else st$bayesforge,
+                     ", Python ", st$python)
+      if (ask_yes_no(paste0(
+        "The BayesForge Python environment ('BFR') is out of date (", what, "; needed: bayesforge ",
+        .bf_bayesforge_version, ", Python ", .bf_python_version, "). Update it now? (Y/N): "
+      )) != "Y") {
+        stop("The BayesForge Python environment is out of date (", what,
+             "). Run setup_env() to update it.", call. = FALSE)
+      }
+      setup_env()
+    }
   }
   use_bf_env()
 }
@@ -210,18 +274,23 @@ BF_load <- function() {
   # named "BayesForge" there (e.g. the R package folder inside
   # BayesForge.Rcheck/, or a user's project folder) would otherwise be
   # imported as an empty namespace package, without `bf`.
+  # Everything runs inside a function: with local = TRUE, code at the top
+  # level of the block (e.g. a list comprehension) cannot see the names the
+  # block defines on Python < 3.12.
   reticulate::py_run_string(paste(
-    "import os, sys",
-    "_bf_cwd = os.getcwd()",
-    "_bf_saved = list(sys.path)",
-    "_bf_mod = sys.modules.get('BayesForge')",
-    "if _bf_mod is not None and getattr(_bf_mod, '__file__', None) is None:",
-    "    del sys.modules['BayesForge']",
-    "sys.path[:] = [p for p in _bf_saved if p not in ('', '.') and os.path.abspath(p) != _bf_cwd]",
-    "try:",
-    "    import BayesForge",
-    "finally:",
-    "    sys.path[:] = _bf_saved",
+    "def _bf_import():",
+    "    import os, sys",
+    "    cwd = os.getcwd()",
+    "    saved = list(sys.path)",
+    "    mod = sys.modules.get('BayesForge')",
+    "    if mod is not None and getattr(mod, '__file__', None) is None:",
+    "        del sys.modules['BayesForge']",
+    "    sys.path[:] = [p for p in saved if p not in ('', '.') and os.path.abspath(p) != cwd]",
+    "    try:",
+    "        import BayesForge",
+    "    finally:",
+    "        sys.path[:] = saved",
+    "_bf_import()",
     sep = "\n"), local = TRUE, convert = FALSE)
   reticulate::import("BayesForge")$bf
 }
